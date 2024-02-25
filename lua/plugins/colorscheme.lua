@@ -1,7 +1,3 @@
-require("lazy").setup({
-	{ "kepano/flexoki-neovim", name = "flexoki" },
-})
-
 return {
 	{ "kepano/flexoki-neovim", name = "flexoki" },
 	{
