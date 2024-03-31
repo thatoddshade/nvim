@@ -20,3 +20,5 @@ require("config.keymaps")
 require("lualine").setup()
 
 vim.cmd[[colorscheme flexoki-dark]]
+
+vim.wo.relativenumber = true
