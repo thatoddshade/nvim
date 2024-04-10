@@ -1,4 +1,5 @@
 vim.cmd[[set mousemodel=extend]]
+vim.cmd[[set clipboard+=unnamedplus]]
 vim.opt.termguicolors = true
 vim.g.mapleader = " "
 
