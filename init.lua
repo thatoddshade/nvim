@@ -1,8 +1,13 @@
-vim.cmd[[set mousemodel=extend]]
-vim.cmd[[set clipboard+=unnamedplus]]
-vim.opt.termguicolors = true
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
+
+vim.opt.number = true
+vim.wo.relativenumber = true
+
+vim.cmd[[set mousemodel=extend]]
+vim.cmd[[set clipboard+=unnamedplus]]
+
+vim.opt.termguicolors = true
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -24,6 +29,3 @@ require "config"
 require("lualine").setup()
 
 vim.cmd[[colorscheme flexoki-dark]]
-
-vim.opt.number = true
-vim.wo.relativenumber = true
