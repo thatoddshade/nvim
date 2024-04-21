@@ -25,4 +25,5 @@ require("lualine").setup()
 
 vim.cmd[[colorscheme flexoki-dark]]
 
+vim.opt.number = true
 vim.wo.relativenumber = true
