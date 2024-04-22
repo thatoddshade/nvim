@@ -7,6 +7,8 @@ vim.wo.relativenumber = true
 vim.cmd[[set mousemodel=extend]]
 vim.cmd[[set clipboard+=unnamedplus]]
 
+vim.opt.cursorline = true
+
 vim.opt.termguicolors = true
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
