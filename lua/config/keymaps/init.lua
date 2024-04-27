@@ -9,35 +9,35 @@ map({ "n", "x" }, "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true
 map({ "n", "x" }, "<Up>", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 
 -- Move to window using the <ctrl> hjkl keys
-map("n", "<C-h>", "<C-w>h", { desc = "Go to Left window", remap = true })
-map("n", "<C-j>", "<C-w>j", { desc = "Go to Lower window", remap = true })
-map("n", "<C-k>", "<C-w>k", { desc = "Go to Upper window", remap = true })
-map("n", "<C-l>", "<C-w>l", { desc = "Go to right window", remap = true })
+map("n", "<C-h>", "<C-w>h", { desc = "go to left window", remap = true })
+map("n", "<C-j>", "<C-w>j", { desc = "go to lower window", remap = true })
+map("n", "<C-k>", "<C-w>k", { desc = "go to upper window", remap = true })
+map("n", "<C-l>", "<C-w>l", { desc = "go to right window", remap = true })
 
 -- Resize window using <ctrl> arrow keys
-map("n", "<C-Up>", "<cmd>resize +2<cr>", { desc = "Increase window Height" })
-map("n", "<C-Down>", "<cmd>resize -2<cr>", { desc = "Decrease window Height" })
-map("n", "<C-Left>", "<cmd>vertical resize -2<cr>", { desc = "Decrease window Width" })
+map("n", "<c-up>", "<cmd>resize +2<cr>", { desc = "increase window height" })
+map("n", "<c-down>", "<cmd>resize -2<cr>", { desc = "decrease window height" })
+map("n", "<c-left>", "<cmd>vertical resize -2<cr>", { desc = "decrease window width" })
 map("n", "<C-right>", "<cmd>vertical resize +2<cr>", { desc = "Increase window Width" })
 
 -- Move Lines
-map("n", "<A-j>", "<cmd>m .+1<cr>==", { desc = "Move Down" })
-map("n", "<A-k>", "<cmd>m .-2<cr>==", { desc = "Move Up" })
-map("i", "<A-j>", "<esc><cmd>m .+1<cr>==gi", { desc = "Move Down" })
-map("i", "<A-k>", "<esc><cmd>m .-2<cr>==gi", { desc = "Move Up" })
-map("v", "<A-j>", ":m '>+1<cr>gv=gv", { desc = "Move Down" })
-map("v", "<A-k>", ":m '<-2<cr>gv=gv", { desc = "Move Up" })
+map("n", "<A-j>", "<cmd>m .+1<cr>==", { desc = "move down" })
+map("n", "<A-k>", "<cmd>m .-2<cr>==", { desc = "move up" })
+map("i", "<A-j>", "<esc><cmd>m .+1<cr>==gi", { desc = "move down" })
+map("i", "<A-k>", "<esc><cmd>m .-2<cr>==gi", { desc = "move up" })
+map("v", "<A-j>", ":m '>+1<cr>gv=gv", { desc = "move down" })
+map("v", "<A-k>", ":m '<-2<cr>gv=gv", { desc = "move up" })
 
 -- buffers
-map("n", "<S-h>", "<cmd>bprevious<cr>", { desc = "Prev Buffer" })
-map("n", "<S-l>", "<cmd>bnext<cr>", { desc = "Next Buffer" })
-map("n", "[b", "<cmd>bprevious<cr>", { desc = "Prev Buffer" })
-map("n", "]b", "<cmd>bnext<cr>", { desc = "Next Buffer" })
-map("n", "<leader>bb", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
-map("n", "<leader>`", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
+map("n", "<S-h>", "<cmd>bprevious<cr>", { desc = "prev buffer" })
+map("n", "<S-l>", "<cmd>bnext<cr>", { desc = "next buffer" })
+map("n", "[b", "<cmd>bprevious<cr>", { desc = "prev buffer" })
+map("n", "]b", "<cmd>bnext<cr>", { desc = "next buffer" })
+map("n", "<leader>bb", "<cmd>e #<cr>", { desc = "switch to other buffer" })
+map("n", "<leader>`", "<cmd>e #<cr>", { desc = "switch to other buffer" })
 
 -- Clear search with <esc>
-map({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and Clear hlsearch" })
+map({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "escape and clear hlsearch" })
 
 -- Clear search, diff update and redraw
 -- taken from runtime/lua/_editor.lua
@@ -49,12 +49,12 @@ map(
 )
 
 -- https://github.com/mhinz/vim-galore#saner-behavior-of-n-and-n
-map("n", "n", "'Nn'[v:searchforward].'zv'", { expr = true, desc = "Next Search Result" })
-map("x", "n", "'Nn'[v:searchforward]", { expr = true, desc = "Next Search Result" })
-map("o", "n", "'Nn'[v:searchforward]", { expr = true, desc = "Next Search Result" })
-map("n", "N", "'nN'[v:searchforward].'zv'", { expr = true, desc = "Prev Search Result" })
-map("x", "N", "'nN'[v:searchforward]", { expr = true, desc = "Prev Search Result" })
-map("o", "N", "'nN'[v:searchforward]", { expr = true, desc = "Prev Search Result" })
+map("n", "n", "'Nn'[v:searchforward].'zv'", { expr = true, desc = "next search result" })
+map("x", "n", "'Nn'[v:searchforward]", { expr = true, desc = "next search result" })
+map("o", "n", "'Nn'[v:searchforward]", { expr = true, desc = "next search result" })
+map("n", "N", "'nN'[v:searchforward].'zv'", { expr = true, desc = "prev search result" })
+map("x", "N", "'nN'[v:searchforward]", { expr = true, desc = "prev search result" })
+map("o", "N", "'nN'[v:searchforward]", { expr = true, desc = "prev search result" })
 
 -- Add undo break-points
 map("i", ",", ",<c-g>u")
@@ -62,7 +62,7 @@ map("i", ".", ".<c-g>u")
 map("i", ";", ";<c-g>u")
 
 -- save file
-map({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save File" })
+map({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "save file" })
 
 --keywordprg
 map("n", "<leader>K", "<cmd>norm! K<cr>", { desc = "Keywordprg" })
@@ -75,13 +75,13 @@ map("v", ">", ">gv")
 map("n", "<leader>l", "<cmd>Lazy<cr>", { desc = "Lazy" })
 
 -- new file
-map("n", "<leader>fn", "<cmd>enew<cr>", { desc = "New File" })
+map("n", "<leader>fn", "<cmd>enew<cr>", { desc = "new file" })
 
-map("n", "<leader>xl", "<cmd>lopen<cr>", { desc = "Location List" })
-map("n", "<leader>xq", "<cmd>copen<cr>", { desc = "Quickfix List" })
+map("n", "<leader>xl", "<cmd>lopen<cr>", { desc = "location list" })
+map("n", "<leader>xq", "<cmd>copen<cr>", { desc = "quickfix list" })
 
-map("n", "[q", vim.cmd.cprev, { desc = "Previous Quickfix" })
-map("n", "]q", vim.cmd.cnext, { desc = "Next Quickfix" })
+map("n", "[q", vim.cmd.cprev, { desc = "previous quickfix" })
+map("n", "]q", vim.cmd.cnext, { desc = "next quickfix" })
 
 -- formatting
 map({ "n", "v" }, "<leader>cf", function()
@@ -96,13 +96,13 @@ local diagnostic_goto = function(next, severity)
     go({ severity = severity })
   end
 end
-map("n", "<leader>cd", vim.diagnostic.open_float, { desc = "Line Diagnostics" })
-map("n", "]d", diagnostic_goto(true), { desc = "Next Diagnostic" })
-map("n", "[d", diagnostic_goto(false), { desc = "Prev Diagnostic" })
-map("n", "]e", diagnostic_goto(true, "ERROR"), { desc = "Next Error" })
-map("n", "[e", diagnostic_goto(false, "ERROR"), { desc = "Prev Error" })
-map("n", "]w", diagnostic_goto(true, "WARN"), { desc = "Next Warning" })
-map("n", "[w", diagnostic_goto(false, "WARN"), { desc = "Prev Warning" })
+map("n", "<leader>cd", vim.diagnostic.open_float, { desc = "line diagnostics" })
+map("n", "]d", diagnostic_goto(true), { desc = "next diagnostic" })
+map("n", "[d", diagnostic_goto(false), { desc = "prev diagnostic" })
+map("n", "]e", diagnostic_goto(true, "ERROR"), { desc = "next error" })
+map("n", "[e", diagnostic_goto(false, "ERROR"), { desc = "prev error" })
+map("n", "]w", diagnostic_goto(true, "WARN"), { desc = "next warning" })
+map("n", "[w", diagnostic_goto(false, "WARN"), { desc = "prev warning" })
 
 -- stylua: ignore start
 
