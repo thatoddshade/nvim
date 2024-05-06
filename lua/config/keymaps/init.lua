@@ -84,9 +84,9 @@ map("n", "[q", vim.cmd.cprev, { desc = "previous quickfix" })
 map("n", "]q", vim.cmd.cnext, { desc = "next quickfix" })
 
 -- formatting
-map({ "n", "v" }, "<leader>cf", function()
-  LazyVim.format({ force = true })
-end, { desc = "Format" })
+--map({ "n", "v" }, "<leader>cf", function()
+--  LazyVim.format({ force = true })
+--end, { desc = "Format" })
 
 -- diagnostic
 local diagnostic_goto = function(next, severity)
@@ -107,15 +107,15 @@ map("n", "[w", diagnostic_goto(false, "WARN"), { desc = "prev warning" })
 -- stylua: ignore start
 
 -- toggle options
-map("n", "<leader>uf", function() LazyVim.format.toggle() end, { desc = "Toggle Auto Format (Global)" })
-map("n", "<leader>uF", function() LazyVim.format.toggle(true) end, { desc = "Toggle Auto Format (Buffer)" })
-map("n", "<leader>us", function() LazyVim.toggle("spell") end, { desc = "Toggle Spelling" })
-map("n", "<leader>uw", function() LazyVim.toggle("wrap") end, { desc = "Toggle Word Wrap" })
-map("n", "<leader>uL", function() LazyVim.toggle("relativenumber") end, { desc = "Toggle Relative Line Numbers" })
-map("n", "<leader>ul", function() LazyVim.toggle.number() end, { desc = "Toggle Line Numbers" })
-map("n", "<leader>ud", function() LazyVim.toggle.diagnostics() end, { desc = "Toggle Diagnostics" })
-local conceallevel = vim.o.conceallevel > 0 and vim.o.conceallevel or 3
-map("n", "<leader>uc", function() LazyVim.toggle("conceallevel", false, {0, conceallevel}) end, { desc = "Toggle Conceal" })
+--map("n", "<leader>uf", function() LazyVim.format.toggle() end, { desc = "Toggle Auto Format (Global)" })
+--map("n", "<leader>uF", function() LazyVim.format.toggle(true) end, { desc = "Toggle Auto Format (Buffer)" })
+--map("n", "<leader>us", function() LazyVim.toggle("spell") end, { desc = "Toggle Spelling" })
+--map("n", "<leader>uw", function() LazyVim.toggle("wrap") end, { desc = "Toggle Word Wrap" })
+--map("n", "<leader>uL", function() LazyVim.toggle("relativenumber") end, { desc = "Toggle Relative Line Numbers" })
+--map("n", "<leader>ul", function() LazyVim.toggle.number() end, { desc = "Toggle Line Numbers" })
+--map("n", "<leader>ud", function() LazyVim.toggle.diagnostics() end, { desc = "Toggle Diagnostics" })
+--local conceallevel = vim.o.conceallevel > 0 and vim.o.conceallevel or 3
+--map("n", "<leader>uc", function() LazyVim.toggle("conceallevel", false, {0, conceallevel}) end, { desc = "Toggle Conceal" })
 --if vim.lsp.buf.inlay_hint or vim.lsp.inlay_hint then
 --  map( "n", "<leader>uh", function() LazyVim.toggle.inlay_hints() end, { desc = "Toggle Inlay Hints" })
 --end
@@ -141,11 +141,11 @@ map("n", "<leader>ui", vim.show_pos, { desc = "Inspect Pos" })
 --map("n", "<leader>L", function() LazyVim.news.changelog() end, { desc = "LazyVim changelog" })
 
 -- floating terminal
-local lazyterm = function() LazyVim.terminal(nil, { cwd = LazyVim.root() }) end
-map("n", "<leader>ft", lazyterm, { desc = "Terminal (Root Dir)" })
-map("n", "<leader>fT", function() LazyVim.terminal() end, { desc = "Terminal (cwd)" })
-map("n", "<c-/>", lazyterm, { desc = "Terminal (Root Dir)" })
-map("n", "<c-_>", lazyterm, { desc = "which_key_ignore" })
+--local lazyterm = function() LazyVim.terminal(nil, { cwd = LazyVim.root() }) end
+--map("n", "<leader>ft", lazyterm, { desc = "Terminal (Root Dir)" })
+--map("n", "<leader>fT", function() LazyVim.terminal() end, { desc = "Terminal (cwd)" })
+--map("n", "<c-/>", lazyterm, { desc = "Terminal (Root Dir)" })
+--map("n", "<c-_>", lazyterm, { desc = "which_key_ignore" })
 
 -- terminal mappings
 map("t", "<esc><esc>", "<c-\\><c-n>", { desc = "Enter normal mode" })
