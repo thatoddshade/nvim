@@ -16,10 +16,10 @@ return {
 	--	 end
 	-- },
 	{
-		"rebelot/kanagawa.nvim",
-		priority = 1000,
-		config = function()
-			vim.cmd("colorscheme kanagawa-dragon")
+		"kepano/flexoki-neovim",
+	 	priority = 1000,
+	 	config = function()
+		 	vim.cmd("colorscheme flexoki-dark")
 		end
 	},
 	
